@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.luthfi.ecommerce.ui.main.MainFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chartFragment"
+            app:destination="@id/chartFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <argument
+            android:name="flag"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.luthfi.ecommerce.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="flag"
+                android:defaultValue="profile"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.luthfi.ecommerce.ui.main.detail.DetailFragmentCompose"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+        <deepLink app:uri="www.tokopaerbe.com/{productId}" />
+        <action
+            android:id="@+id/action_detailFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+        <argument
+            android:name="variantName"
+            android:defaultValue="RAM 16GB"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.luthfi.ecommerce.ui.main.review.ReviewFragmentCompose"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.luthfi.ecommerce.ui.main.chart.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart">
+        <action
+            android:id="@+id/action_chartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.luthfi.ecommerce.ui.main.checkout.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.luthfi.ecommerce.ui.main.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout">
+        <argument
+            android:name="checkoutItems"
+            app:argType="com.luthfi.ecommerce.core.domain.model.Product[]" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_statusFragment"
+            app:destination="@id/statusFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToSaveState="false"
+            app:restoreState="false" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.luthfi.ecommerce.ui.main.status.StatusFragment"
+        android:label="fragment_status"
+        tools:layout="@layout/fragment_status">
+        <argument
+            android:name="invoiceId"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="boolean" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+        <argument
+            android:name="payment"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+        <argument
+            android:name="review"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="rating"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_statusFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="flag"
+                android:defaultValue="transaction"
+                app:nullable="true" />
+        </action>
+        <argument
+            android:name="flagDestination"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.luthfi.ecommerce.ui.main.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+
+
+</navigation>

@@ -1,0 +1,67 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ecommerce" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="fontFamily">@font/poppins_400</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="background">@color/white</item>
+        <!-- Customize your dark theme here. -->
+        <!--        <item name="colorPrimary">@color/p_80</item>-->
+        <!--        <item name="colorPrimaryContainer">@color/p_30</item>-->
+        <!--        <item name="colorOnPrimary">@color/p_20</item>-->
+        <!--        <item name="colorOnPrimaryContainer">@color/p_90</item>-->
+        <!--        <item name="colorPrimaryFixed">@color/p_90</item>-->
+        <!--        <item name="colorPrimaryFixedDim">@color/p_80</item>-->
+        <!--        <item name="colorOnPrimaryFixed">@color/p_10</item>-->
+        <!--        <item name="colorOnPrimaryFixedVariant">@color/p_30</item>-->
+
+        <!--        <item name="colorSecondary">@color/s_80</item>-->
+        <!--        <item name="colorSecondaryContainer">@color/s_30</item>-->
+        <!--        <item name="colorOnSecondary">@color/s_20</item>-->
+        <!--        <item name="colorOnSecondaryContainer">@color/s_90</item>-->
+        <!--        <item name="colorSecondaryFixed">@color/s_90</item>-->
+        <!--        <item name="colorSecondaryFixedDim">@color/s_80</item>-->
+        <!--        <item name="colorOnSecondaryFixed">@color/s_10</item>-->
+        <!--        <item name="colorOnSecondaryFixedVariant">@color/s_30</item>-->
+
+        <!--        <item name="colorTertiary">@color/t_80</item>-->
+        <!--        <item name="colorTertiaryContainer">@color/t_30</item>-->
+        <!--        <item name="colorOnTertiary">@color/t_20</item>-->
+        <!--        <item name="colorOnTertiaryContainer">@color/t_90</item>-->
+        <!--        <item name="colorTertiaryFixed">@color/t_90</item>-->
+        <!--        <item name="colorTertiaryFixedDim">@color/t_80</item>-->
+        <!--        <item name="colorOnTertiaryFixed">@color/t_10</item>-->
+        <!--        <item name="colorOnTertiaryFixedVariant">@color/t_30</item>-->
+
+        <!--        <item name="colorSurfaceDim">@color/n_6</item>-->
+        <!--        <item name="colorSurface">@color/n_6</item>-->
+        <!--        <item name="colorSurfaceBright">@color/n_24</item>-->
+        <!--        <item name="colorSurfaceContainerLowest">@color/n_4</item>-->
+        <!--        <item name="colorSurfaceContainerLow">@color/n_10</item>-->
+        <!--        <item name="colorSurfaceContainerHigh">@color/n_17</item>-->
+        <!--        <item name="colorSurfaceContainer">@color/n_12</item>-->
+        <!--        <item name="colorSurfaceContainerHighest">@color/n_22</item>-->
+        <!--        <item name="colorOnSurface">@color/n_90</item>-->
+        <!--        <item name="colorOnSurfaceVariant">@color/nv_80</item>-->
+        <!--        <item name="colorOutline">@color/nv_60</item>-->
+        <!--        <item name="colorOutlineVariant">@color/nv_30</item>-->
+
+        <!--        <item name="colorError">@color/e_80</item>-->
+        <!--        <item name="colorOnError">@color/e</item>-->
+        <!--        <item name="colorErrorContainer">@color/e_90</item>-->
+        <!--        <item name="colorOnErrorContainer">@color/e_10</item>-->
+
+        <!--        <item name="colorSurfaceInverse">@color/n_90</item>-->
+        <!--        <item name="colorOnSurfaceInverse">@color/n_20</item>-->
+        <!--        <item name="colorPrimaryInverse">@color/p_40</item>-->
+        <!--        <item name="scrimBackground">@color/black</item>-->
+        <!--        <item name="android:shadowColor">@color/black</item>-->
+    </style>
+
+    <style name="label_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#6750A4</item>
+    </style>
+
+</resources>

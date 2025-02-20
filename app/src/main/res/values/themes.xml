@@ -1,0 +1,176 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ecommerce" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.App.Button</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.App.TitleMedium</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <!-- Customize your light theme here. -->
+        <!--        <item name="colorPrimary">@color/p_40</item>-->
+        <!--        <item name="colorPrimaryContainer">@color/p_90</item>-->
+        <!--        <item name="colorOnPrimary">@color/white</item>-->
+        <!--        <item name="colorOnPrimaryContainer">@color/p_10</item>-->
+        <!--        <item name="colorPrimaryFixed">@color/p_90</item>-->
+        <!--        <item name="colorPrimaryFixedDim">@color/p_80</item>-->
+        <!--        <item name="colorOnPrimaryFixed">@color/p_10</item>-->
+        <!--        <item name="colorOnPrimaryFixedVariant">@color/p_30</item>-->
+
+        <!--        <item name="colorSecondary">@color/s_40</item>-->
+        <!--        <item name="colorSecondaryContainer">@color/s_90</item>-->
+        <!--        <item name="colorOnSecondary">@color/white</item>-->
+        <!--        <item name="colorOnSecondaryContainer">@color/s_10</item>-->
+        <!--        <item name="colorSecondaryFixed">@color/s_90</item>-->
+        <!--        <item name="colorSecondaryFixedDim">@color/s_80</item>-->
+        <!--        <item name="colorOnSecondaryFixed">@color/s_10</item>-->
+        <!--        <item name="colorOnSecondaryFixedVariant">@color/s_30</item>-->
+
+        <!--        <item name="colorTertiary">@color/t_40</item>-->
+        <!--        <item name="colorTertiaryContainer">@color/t_90</item>-->
+        <!--        <item name="colorOnTertiary">@color/white</item>-->
+        <!--        <item name="colorOnTertiaryContainer">@color/t_10</item>-->
+        <!--        <item name="colorTertiaryFixed">@color/t_90</item>-->
+        <!--        <item name="colorTertiaryFixedDim">@color/t_80</item>-->
+        <!--        <item name="colorOnTertiaryFixed">@color/t_10</item>-->
+        <!--        <item name="colorOnTertiaryFixedVariant">@color/t_30</item>-->
+
+        <!--        <item name="colorSurfaceDim">@color/n_87</item>-->
+        <!--        <item name="colorSurface">@color/n_98</item>-->
+        <!--        <item name="colorSurfaceBright">@color/n_90</item>-->
+        <!--        <item name="colorSurfaceContainerLowest">@color/white</item>-->
+        <!--        <item name="colorSurfaceContainerLow">@color/n_96</item>-->
+        <!--        <item name="colorSurfaceContainer">@color/n_94</item>-->
+        <!--        <item name="colorSurfaceContainerHighest">@color/n_90</item>-->
+        <!--        <item name="colorOnSurface">@color/n_10</item>-->
+        <!--        <item name="colorOnSurfaceVariant">@color/nv_30</item>-->
+        <!--        <item name="colorOutline">@color/nv_50</item>-->
+        <!--        <item name="colorOutlineVariant">@color/nv_80</item>-->
+
+        <!--        <item name="colorError">@color/e_40</item>-->
+        <!--        <item name="colorOnError">@color/white</item>-->
+        <!--        <item name="colorErrorContainer">@color/e_90</item>-->
+        <!--        <item name="colorOnErrorContainer">@color/e_10</item>-->
+
+        <!--        <item name="colorSurfaceInverse">@color/n_20</item>-->
+        <!--        <item name="colorOnSurfaceInverse">@color/n_95</item>-->
+        <!--        <item name="colorPrimaryInverse">@color/p_80</item>-->
+        <!--        <item name="scrimBackground">@color/black</item>-->
+        <!--        <item name="android:shadowColor">@color/black</item>-->
+
+    </style>
+
+    <style name="Theme.Ecommerce" parent="Base.Theme.Ecommerce">
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/news_avd_v02_static</item>-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/animated_splash_icon_static</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.Ecommerce</item>
+    </style>
+
+    <style name="label_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#6750A4</item>
+    </style>
+
+    <style name="customRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">64dp</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Chip</item>
+        <!--        <item name="android:elevation">0dp</item>-->
+        <!--        <item name="elevationOverlayEnabled">false</item>-->
+    </style>
+
+    <style name="ThemeOverlay.App.Chip" parent="">
+        <item name="elevation">0dp</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="android:fontFamily">@font/poppins_400</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins_500</item>
+        <item name="android:fontFamily">@font/poppins_500</item>
+    </style>
+
+    <style name="TextAppearance.App.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins_400</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/poppins_400</item>
+    </style>
+
+    <style name="TextAppearance.App.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins_500</item>
+        <item name="android:fontFamily">@font/poppins_500</item>
+    </style>
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.App.TitleMedium</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.App.TitleMedium</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="fontFamily">@font/poppins_600</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.TextButton">
+        <item name="android:fontFamily">@font/poppins_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/poppins_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <!--        <item name="android:paddingLeft">0dp</item>-->
+        <!--        <item name="android:paddingRight">0dp</item>-->
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="customRoundedImageView8dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>

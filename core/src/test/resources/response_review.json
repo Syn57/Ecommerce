@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "message": "OK",
+  "data": [
+    {
+      "userName": "John",
+      "userImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQM4VpzpVw8mR2j9_gDajEthwY3KCOWJ1tOhcv47-H9o1a-s9GRPxdb_6G9YZdGfv0HIg&usqp=CAU",
+      "userRating": 4,
+      "userReview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+  ]
+}

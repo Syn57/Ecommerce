@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.main.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="206dp"
+            android:layout_height="182dp"
+            android:layout_marginBottom="66dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_logout_hit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_loczyi01" />
+
+        <Button
+            android:id="@+id/btn_logout_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_language_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_400"
+            android:gravity="center"
+            android:text="@string/en"
+            app:layout_constraintBottom_toBottomOf="@id/switch_language"
+            app:layout_constraintEnd_toStartOf="@id/switch_language"
+            app:layout_constraintTop_toTopOf="@id/switch_language" />
+
+        <TextView
+            android:id="@+id/tv_language_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="@string/id"
+            app:layout_constraintBottom_toBottomOf="@id/switch_language"
+            app:layout_constraintStart_toEndOf="@id/switch_language"
+            app:layout_constraintTop_toTopOf="@id/switch_language" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_logout_hit" />
+
+        <TextView
+            android:id="@+id/tv_theme_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_400"
+            android:gravity="center"
+            android:text="@string/light"
+            app:layout_constraintBottom_toBottomOf="@id/switch_theme"
+            app:layout_constraintEnd_toStartOf="@id/switch_theme"
+            app:layout_constraintTop_toTopOf="@id/switch_theme" />
+
+        <TextView
+            android:id="@+id/tv_theme_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_400"
+            android:gravity="center"
+            android:text="@string/dark"
+            app:layout_constraintBottom_toBottomOf="@id/switch_theme"
+            app:layout_constraintStart_toEndOf="@id/switch_theme"
+            app:layout_constraintTop_toTopOf="@id/switch_theme" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_language" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

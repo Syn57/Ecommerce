@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.chart.ChartFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tb_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="@string/chart" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <CheckBox
+        android:id="@+id/cb_chart_check_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/abl_chart" />
+
+    <TextView
+        android:id="@+id/tv_choose_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_500"
+        android:text="@string/choose_all"
+        app:layout_constraintBottom_toBottomOf="@id/cb_chart_check_all"
+        app:layout_constraintStart_toEndOf="@id/cb_chart_check_all"
+        app:layout_constraintTop_toTopOf="@id/cb_chart_check_all" />
+
+    <Button
+        android:id="@+id/btn_chart_erase_all"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@id/cb_chart_check_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cb_chart_check_all" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dvdr_chart_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_chart_check_all" />
+
+
+    <TextView
+        android:id="@+id/tv_chart_total_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_600"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Rp23.499.0000" />
+
+    <TextView
+        android:id="@+id/tv_chart_total_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/total_payment"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_chart_total_pay"
+        app:layout_constraintStart_toStartOf="@id/tv_chart_total_pay" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dvdr_chart_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_chart_total_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_chart_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/buy"
+        app:layout_constraintBottom_toBottomOf="@id/tv_chart_total_pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_chart_total_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/dvdr_chart_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_chart_check_all"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_chart" />
+
+    <ImageView
+        android:id="@+id/iv_chart_error"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/store_error"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_chart_error_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/abl_chart"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_chart_error_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_500"
+        android:gravity="center"
+        android:text="@string/empty"
+        android:textSize="32sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_chart_error_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_chart_error" />
+
+    <TextView
+        android:id="@+id/tv_chart_error_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_400"
+        android:gravity="center"
+        android:text="@string/http_exception_404_message"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/dvdr_chart_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_chart_error_code" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

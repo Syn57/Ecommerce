@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vg_item_payment_method_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_item_payment_detail_party_logo"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_item_payment_detail_forward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_item_payment_detail_forward"
+        tools:src="@drawable/bca" />
+
+    <ImageView
+        android:id="@+id/iv_item_payment_detail_forward"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginEnd="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_foward_ios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_payment_detail_party_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="83dp"
+        android:fontFamily="@font/poppins_400"
+        app:layout_constraintBottom_toBottomOf="@id/iv_item_payment_detail_party_logo"
+        app:layout_constraintEnd_toStartOf="@id/iv_item_payment_detail_forward"
+        app:layout_constraintStart_toEndOf="@id/iv_item_payment_detail_party_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_item_payment_detail_party_logo"
+        tools:text="BCA Virtual Account" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_item_payment_detail_party_logo"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_payment_detail_party_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

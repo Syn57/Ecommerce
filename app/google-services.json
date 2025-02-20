@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856951040183",
+    "project_id": "toko-phincon",
+    "storage_bucket": "toko-phincon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856951040183:android:57d2ed42a316a8230c0532",
+        "android_client_info": {
+          "package_name": "com.luthfi.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxpWfqSaBk6iXmZeqMK_6o9evGHnFc8Po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
