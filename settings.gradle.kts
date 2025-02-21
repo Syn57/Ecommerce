@@ -14,6 +14,8 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "Ecommerce"
 include(":app")
 include(":core")
