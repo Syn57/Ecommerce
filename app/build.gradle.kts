@@ -1,13 +1,15 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("androidx.navigation.safeargs")
-    id("com.google.devtools.ksp")
-    id("kotlin-parcelize")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-    id("jacoco")
-    id("io.gitlab.arturbosch.detekt")
+    alias(libs.plugins.ecommerce.application)
+    alias(libs.plugins.ecommerce.app.compose)
+//    id("com.android.application")
+//    id("org.jetbrains.kotlin.android")
+//    id("androidx.navigation.safeargs")
+//    id("com.google.devtools.ksp")
+//    id("kotlin-parcelize")
+//    id("com.google.gms.google-services")
+//    id("com.google.firebase.crashlytics")
+//    id("jacoco")
+//    id("io.gitlab.arturbosch.detekt")
 }
 
 apply(from = "../shared_dependencies.gradle")
@@ -63,27 +65,8 @@ android {
         }
     }
 
-
-    defaultConfig {
-        applicationId = "com.luthfi.ecommerce"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-    }
-
-
     buildFeatures {
         viewBinding = true
-        buildConfig = true
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.5"
     }
 
     buildTypes {
@@ -95,16 +78,6 @@ android {
             )
             signingConfig = signingConfigs.getByName("debug")
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2"
-    }
-    kotlinOptions {
-        jvmTarget = "17"
     }
 }
 

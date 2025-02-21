@@ -12,7 +12,7 @@ accompanist = "0.34.0"
 androidDesugarJdkLibs = "2.0.4"
 # AGP and tools should be updated together
 androidGradlePlugin = "8.5.2"
-androidTools = "31.6.1"
+androidTools = "31.8.1"
 androidxActivity = "1.9.2"
 androidxAppCompat = "1.7.0"
 androidxBrowser = "1.8.0"
@@ -48,7 +48,8 @@ hilt = "2.52"
 hiltExt = "1.2.0"
 jacoco = "0.8.7"
 junit4 = "4.13.2"
-kotlin = "2.0.20"
+koin = "3.4.3"
+kotlin = "2.1.0"
 kotlinxCoroutines = "1.9.0"
 kotlinxDatetime = "0.6.1"
 kotlinxSerializationJson = "1.6.3"
@@ -70,6 +71,10 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.3"
 constraintlayout = "2.2.0"
+lifecycle = "2.6.2"
+fragment = "1.6.2"
+gson = "2.10.1"
+navigation = "2.7.6"
 
 [bundles]
 androidx-compose-ui-test = ["androidx-compose-ui-test", "androidx-compose-ui-testManifest"]
@@ -151,6 +156,8 @@ hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hi
 hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
 hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
+koin-core = {group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = {group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
@@ -174,6 +181,12 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name ="lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -211,3 +224,11 @@ protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
 #roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 room = { id = "androidx.room", version.ref = "room" }
 secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
+
+# Defined in this project
+ecommerce-application = { id = "com.ecommerce.application", version = "unspecified" }
+ecommerce-app-compose = { id = "com.ecommerce.application.compose", version = "unspecified" }
+ecommerce-lib-compose = { id = "com.ecommerce.library.compose", version = "unspecified" }
+ecommerce-library = { id = "com.ecommerce.library", version = "unspecified" }
+ecommerce-feature = { id = "com.ecommerce.feature", version = "unspecified" }
+ecommerce-room = { id = "com.ecommerce.room", version = "unspecified" }
