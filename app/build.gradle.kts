@@ -1,17 +1,9 @@
 plugins {
     alias(libs.plugins.ecommerce.application)
     alias(libs.plugins.ecommerce.app.compose)
-//    id("com.android.application")
-//    id("org.jetbrains.kotlin.android")
-//    id("androidx.navigation.safeargs")
-//    id("com.google.devtools.ksp")
-//    id("kotlin-parcelize")
-//    id("com.google.gms.google-services")
-//    id("com.google.firebase.crashlytics")
-//    id("jacoco")
-//    id("io.gitlab.arturbosch.detekt")
 }
 
+// TODO: To be removed after finishing modularization
 apply(from = "../shared_dependencies.gradle")
 
 private val coverageExclusions = listOf(
