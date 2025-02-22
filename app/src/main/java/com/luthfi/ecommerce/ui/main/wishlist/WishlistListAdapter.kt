@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.domain.model.Product
 import com.luthfi.ecommerce.databinding.ItemWishlistGridBinding
 import com.luthfi.ecommerce.databinding.ItemWishlistLinearBinding
@@ -37,7 +38,7 @@ class WishlistListAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Product) {
             with(binding) {
-                cvWishlistGrid.startAnimation(AnimationUtils.loadAnimation(itemView.context, R.anim.anim_one))
+                cvWishlistGrid.startAnimation(AnimationUtils.loadAnimation(itemView.context, RAPP.anim.anim_one))
                 tvItemWishlistGridProductName.text = data.productName
                 tvItemWishlistGridPrice.text = format(data.productPrice + data.variantPrice)
                 tvItemWishlistGridStoreName.text = data.store
@@ -62,7 +63,7 @@ class WishlistListAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Product) {
             with(binding) {
-                cvWishlistLinear.startAnimation(AnimationUtils.loadAnimation(itemView.context, R.anim.anim_one))
+                cvWishlistLinear.startAnimation(AnimationUtils.loadAnimation(itemView.context, RAPP.anim.anim_one))
                 tvItemWishlistLinearProductName.text = data.productName
                 tvItemWishlistLinearPrice.text = format(data.productPrice + data.variantPrice)
                 tvItemWishlistLinearStoreName.text = data.store

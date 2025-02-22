@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.responses.TransactionResponse
 import com.luthfi.ecommerce.databinding.ItemTransactionBinding
 import com.luthfi.ecommerce.utils.format
@@ -36,7 +37,7 @@ class TransactionAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: TransactionResponse.Data) {
             with(binding) {
-                cvTransaction.startAnimation(AnimationUtils.loadAnimation(itemView.context, R.anim.anim_one))
+                cvTransaction.startAnimation(AnimationUtils.loadAnimation(itemView.context, RAPP.anim.anim_one))
                 tvItemTransactionDate.text = data.date
                 Glide.with(context)
                     .load(data.image)

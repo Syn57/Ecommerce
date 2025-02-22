@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.domain.model.Notification
 import com.luthfi.ecommerce.databinding.ItemNotificationBinding
 

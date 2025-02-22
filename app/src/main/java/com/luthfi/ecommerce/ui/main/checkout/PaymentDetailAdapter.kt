@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.R
+import com.ecommerce.uiassets.R as RUI
 import com.google.android.material.color.MaterialColors
 import com.luthfi.ecommerce.core.domain.model.Payment
 import com.luthfi.ecommerce.databinding.ItemPaymentMethodDetailBinding
@@ -33,7 +34,7 @@ class PaymentDetailAdapter(
             with(binding) {
                 Glide.with(context)
                     .load(data.image)
-                    .error(com.luthfi.ecommerce.R.drawable.thumbnail_load_product)
+                    .error(RUI.drawable.thumbnail_load_product)
                     .into(ivItemPaymentDetailPartyLogo)
                 itemView.alpha = if (data.status != false) 1f else 0.5f
                 val color = MaterialColors.getColor(

@@ -15,7 +15,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.body.LoginBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
@@ -37,8 +38,8 @@ class LoginFragment : Fragment() {
 
         // Preference checking
         if (!viewModel.prefGetIsOnboard()) {
-            if (findNavController().currentDestination?.id == R.id.loginFragment) {
-                findNavController().navigate(R.id.action_loginFragment_to_onboardingFragment)
+            if (findNavController().currentDestination?.id == RAPP.id.loginFragment) {
+                findNavController().navigate(RAPP.id.action_loginFragment_to_onboardingFragment)
             }
         }
     }
@@ -113,7 +114,7 @@ class LoginFragment : Fragment() {
         )
         binding.btnLoginReghit.setOnClickListener {
             Navigation.findNavController(view)
-                .navigate(R.id.action_loginFragment_to_registerFragment)
+                .navigate(RAPP.id.action_loginFragment_to_registerFragment)
         }
 
         // Response observer
@@ -128,7 +129,7 @@ class LoginFragment : Fragment() {
                         viewModel.prefSetRefreshToken(value.data.data?.refreshToken ?: "")
                         viewModel.prefSetUsername(value.data.data?.userName ?: "")
                         viewModel.prefSetIsLogin(true)
-                        findNavController().navigate(R.id.action_preloginNavto_mainNav)
+                        findNavController().navigate(RAPP.id.action_preloginNavto_mainNav)
                     }
 
                     is Resource.Loading -> {}

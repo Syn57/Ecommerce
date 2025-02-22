@@ -86,9 +86,7 @@ import com.google.accompanist.pager.PagerState
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.gson.Gson
-import com.like.LikeButton
-import com.like.OnLikeListener
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ProductResponse
@@ -690,70 +688,70 @@ class DetailFragmentCompose : BaseFragment() {
                                 }
                         )
 
-                        AndroidView(
-                            factory = { context ->
-                                LikeButton(context).apply {
-                                    viewModel.getIsFav(data.data.productId).observe(viewLifecycleOwner) {
-                                        viewModel.isFav = it
-                                        when (it) {
-                                            true -> this.isLiked = true
-                                            false -> this.isLiked = false
-                                        }
-                                    }
-                                    this.isEnabled = true
-                                    setLikeDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_favorite_red, context.theme))
-                                    setUnlikeDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_favorite_border, context.theme))
-                                    setIconSizeDp(24);
-                                    setOnLikeListener(object: OnLikeListener{
-                                        override fun liked(likeButton: LikeButton?) {
-                                            viewModel.isFav = !viewModel.isFav
-                                            viewModel.insertFav(viewModel.product)
-                                            scope.launch {
-                                                snackbarHostState.showSnackbar(
-                                                    message = getString(R.string.success_added_to_wishlist),
-                                                    duration = SnackbarDuration.Short
-                                                )
-                                            }
-                                            analytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST) {
-                                                val bs = Bundle()
-                                                bs.putString(
-                                                    FirebaseAnalytics.Param.ITEM_NAME,
-                                                    viewModel.product.productName
-                                                )
-                                                bs.putString(
-                                                    FirebaseAnalytics.Param.ITEM_BRAND,
-                                                    viewModel.product.brand
-                                                )
-                                                param(FirebaseAnalytics.Param.ITEMS, arrayOf(bs))
-                                                param(FirebaseAnalytics.Param.CURRENCY, INDONESIA_CURRENCY)
-                                                param(
-                                                    FirebaseAnalytics.Param.VALUE,
-                                                    (viewModel.product.productPrice + viewModel.product.variantPrice).toDouble()
-                                                )
-                                            }
-                                        }
-
-                                        override fun unLiked(likeButton: LikeButton?) {
-                                            viewModel.isFav = !viewModel.isFav
-                                            viewModel.deleteFav(viewModel.product.productId)
-                                            scope.launch {
-                                                snackbarHostState.showSnackbar(
-                                                    message = getString(R.string.removed_from_wishlist),
-                                                    duration = SnackbarDuration.Short
-                                                )
-                                            }
-                                        }
-                                    })
-                                }
-                            },
-                            modifier = Modifier
-                                .size(24.dp)
-                                .constrainAs(fav) {
-                                    end.linkTo(parent.end)
-                                    top.linkTo(parent.top, margin = 14.dp)
-                                },
-
-                        )
+//                        AndroidView(
+//                            factory = { context ->
+//                                LikeButton(context).apply {
+//                                    viewModel.getIsFav(data.data.productId).observe(viewLifecycleOwner) {
+//                                        viewModel.isFav = it
+//                                        when (it) {
+//                                            true -> this.isLiked = true
+//                                            false -> this.isLiked = false
+//                                        }
+//                                    }
+//                                    this.isEnabled = true
+//                                    setLikeDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_favorite_red, context.theme))
+//                                    setUnlikeDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_favorite_border, context.theme))
+//                                    setIconSizeDp(24);
+//                                    setOnLikeListener(object: OnLikeListener{
+//                                        override fun liked(likeButton: LikeButton?) {
+//                                            viewModel.isFav = !viewModel.isFav
+//                                            viewModel.insertFav(viewModel.product)
+//                                            scope.launch {
+//                                                snackbarHostState.showSnackbar(
+//                                                    message = getString(R.string.success_added_to_wishlist),
+//                                                    duration = SnackbarDuration.Short
+//                                                )
+//                                            }
+//                                            analytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST) {
+//                                                val bs = Bundle()
+//                                                bs.putString(
+//                                                    FirebaseAnalytics.Param.ITEM_NAME,
+//                                                    viewModel.product.productName
+//                                                )
+//                                                bs.putString(
+//                                                    FirebaseAnalytics.Param.ITEM_BRAND,
+//                                                    viewModel.product.brand
+//                                                )
+//                                                param(FirebaseAnalytics.Param.ITEMS, arrayOf(bs))
+//                                                param(FirebaseAnalytics.Param.CURRENCY, INDONESIA_CURRENCY)
+//                                                param(
+//                                                    FirebaseAnalytics.Param.VALUE,
+//                                                    (viewModel.product.productPrice + viewModel.product.variantPrice).toDouble()
+//                                                )
+//                                            }
+//                                        }
+//
+//                                        override fun unLiked(likeButton: LikeButton?) {
+//                                            viewModel.isFav = !viewModel.isFav
+//                                            viewModel.deleteFav(viewModel.product.productId)
+//                                            scope.launch {
+//                                                snackbarHostState.showSnackbar(
+//                                                    message = getString(R.string.removed_from_wishlist),
+//                                                    duration = SnackbarDuration.Short
+//                                                )
+//                                            }
+//                                        }
+//                                    })
+//                                }
+//                            },
+//                            modifier = Modifier
+//                                .size(24.dp)
+//                                .constrainAs(fav) {
+//                                    end.linkTo(parent.end)
+//                                    top.linkTo(parent.top, margin = 14.dp)
+//                                },
+//
+//                        )
 
 //                        IconButton(
 //                            modifier = Modifier
@@ -1002,15 +1000,15 @@ class DetailFragmentCompose : BaseFragment() {
                             colors = SuggestionChipDefaults.suggestionChipColors(
                                 containerColor = if (it.variantName == productVariantPrice.value) colorSelected else colorUnselected
                             ),
-                            border = SuggestionChipDefaults.suggestionChipBorder(
-                                borderColor = if (it.variantName == productVariantPrice.value) {
-                                    Color.Transparent
-                                } else {
-                                    Color(
-                                        0xFF49454F
-                                    )
-                                }
-                            )
+//                            border = SuggestionChipDefaults.suggestionChipBorder(
+//                                borderColor = if (it.variantName == productVariantPrice.value) {
+//                                    Color.Transparent
+//                                } else {
+//                                    Color(
+//                                        0xFF49454F
+//                                    )
+//                                }
+//                            )
                         )
                     }
                 }

@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
@@ -20,6 +19,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.databinding.FragmentSearchBottomSheetBinding
 import com.luthfi.ecommerce.utils.formatBottomSheet
 import org.koin.android.ext.android.inject
@@ -104,36 +104,36 @@ class SearchBottomSheetFragment : BottomSheetDialogFragment() {
         )
         resetButtonVisibility()
         when (viewModel.sort) {
-            resources.getString(com.luthfi.ecommerce.R.string.rating) -> {
+            resources.getString(R.string.rating) -> {
                 binding.chipStoreRating.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.sale) -> {
+            resources.getString(R.string.sale) -> {
                 binding.chipStoreSale.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.lowest_price) -> {
+            resources.getString(R.string.lowest_price) -> {
                 binding.chipStoreLowest.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.highest_price) -> {
+            resources.getString(R.string.highest_price) -> {
                 binding.chipStoreHighest.isChecked = true
             }
         }
         when (viewModel.category) {
-            resources.getString(com.luthfi.ecommerce.R.string.apple) -> {
+            resources.getString(R.string.apple) -> {
                 binding.chipStoreApple.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.asus) -> {
+            resources.getString(R.string.asus) -> {
                 binding.chipStoreAsus.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.dell) -> {
+            resources.getString(R.string.dell) -> {
                 binding.chipStoreDell.isChecked = true
             }
 
-            resources.getString(com.luthfi.ecommerce.R.string.lenovo) -> {
+            resources.getString(R.string.lenovo) -> {
                 binding.chipStoreLenovo.isChecked = true
             }
         }
@@ -175,19 +175,19 @@ class SearchBottomSheetFragment : BottomSheetDialogFragment() {
         binding.cgSearchBsSort.setOnCheckedStateChangeListener { _, _ ->
             viewModel.sort = when (binding.cgSearchBsSort.checkedChipId) {
                 com.luthfi.ecommerce.R.id.chip_store_rating -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.rating)
+                    resources.getString(R.string.rating)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_sale -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.sale)
+                    resources.getString(R.string.sale)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_lowest -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.lowest_price)
+                    resources.getString(R.string.lowest_price)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_highest -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.highest_price)
+                    resources.getString(R.string.highest_price)
                 }
 
                 else -> {
@@ -200,19 +200,19 @@ class SearchBottomSheetFragment : BottomSheetDialogFragment() {
         binding.cgSearchBsCategory.setOnCheckedStateChangeListener { _, _ ->
             viewModel.category = when (binding.cgSearchBsCategory.checkedChipId) {
                 com.luthfi.ecommerce.R.id.chip_store_apple -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.apple)
+                    resources.getString(R.string.apple)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_asus -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.asus)
+                    resources.getString(R.string.asus)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_dell -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.dell)
+                    resources.getString(R.string.dell)
                 }
 
                 com.luthfi.ecommerce.R.id.chip_store_lenovo -> {
-                    resources.getString(com.luthfi.ecommerce.R.string.lenovo)
+                    resources.getString(R.string.lenovo)
                 }
 
                 else -> {

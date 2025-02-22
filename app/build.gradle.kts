@@ -1,3 +1,5 @@
+import com.ecommerce.buildlogic.utils.Modules
+
 plugins {
     alias(libs.plugins.ecommerce.application)
     alias(libs.plugins.ecommerce.app.compose)
@@ -75,6 +77,8 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    // TODO: Tobe removed later
+    implementation(project(Modules.Core.UI_ASSETS))
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -148,6 +152,6 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.7.5")
 
-    implementation("com.github.jd-alexander:LikeButton:0.2.3")
+//    implementation("com.github.jd-alexander:LikeButton:0.2.3")
 
 }

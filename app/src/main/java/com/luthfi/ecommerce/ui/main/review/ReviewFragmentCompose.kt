@@ -53,7 +53,7 @@ import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.google.gson.Gson
 import com.gowtham.ratingbar.RatingBar
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ReviewResponse

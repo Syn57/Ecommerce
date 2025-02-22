@@ -15,9 +15,14 @@ buildscript {
     }
 }
 plugins {
-    id("com.android.application") version "8.1.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
-    id("com.android.library") version "8.1.2" apply false
-    id("com.google.devtools.ksp") version "1.9.0-1.0.13" apply false
+    alias(libs.plugins.android.application) apply false
+//    id("com.android.application") version "8.1.2" apply false
+//    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+    alias(libs.plugins.compose) apply false
+//    id("com.android.library") version "8.1.2" apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.room) apply false
+    alias(libs.plugins.ksp) apply false
     id("io.gitlab.arturbosch.detekt") version ("1.23.1")
+    alias(libs.plugins.jetbrains.kotlin.android) apply false
 }

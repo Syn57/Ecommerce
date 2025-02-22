@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.databinding.FragmentNotificationBinding
 import com.luthfi.ecommerce.ui.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel

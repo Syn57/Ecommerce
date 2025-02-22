@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ProductResponse
@@ -281,7 +281,7 @@ class DetailFragment : BaseFragment() {
                 requireContext(),
                 null,
                 0,
-                R.style.Widget_App_Chip
+                com.luthfi.ecommerce.R.style.Widget_App_Chip
             )
             chip.setChipDrawable(drawable)
             chip.isHorizontalFadingEdgeEnabled = false

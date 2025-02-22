@@ -13,6 +13,7 @@ import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
 import com.luthfi.ecommerce.MainActivity
 import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R as RUI
 import com.luthfi.ecommerce.core.data.datasource.firebase.data.PromoFcm
 import com.luthfi.ecommerce.core.domain.model.Notification
 import com.luthfi.ecommerce.core.domain.repository.Repository
@@ -45,7 +46,7 @@ class TokopaerbeFirebaseMessaging : FirebaseMessagingService() {
     private fun sendNotification(data: Notification) {
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notification)
+            .setSmallIcon(RUI.drawable.ic_notification)
             .setContentTitle(data.title)
             .setContentText(data.body)
             .setAutoCancel(true)

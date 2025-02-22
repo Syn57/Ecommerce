@@ -1,7 +1,6 @@
 package com.luthfi.ecommerce.ui.main.status
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.databinding.FragmentStatusBinding
@@ -152,7 +152,7 @@ class StatusFragment : BaseFragment() {
             findNavController().navigate(args)
         } else {
             val args = StatusFragmentDirections.actionStatusFragmentToMainFragment()
-            findNavController().navigate(R.id.action_statusFragment_to_mainFragment)
+            findNavController().navigate(RAPP.id.action_statusFragment_to_mainFragment)
         }
     }
 

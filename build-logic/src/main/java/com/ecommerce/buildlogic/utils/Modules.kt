@@ -9,9 +9,11 @@ object Modules {
         const val MODEL = ":core:model"
         const val NETWORK = ":core:network"
         const val UI_ASSETS = ":core:uiassets"
+        const val UI_COMPONENT = ":core:uicomponent"
     }
 
     object Features {
-        const val HOME: String = ":features:home"
+        const val HOME = ":features:home"
+        const val ONBOARDING = ":features:onboarding"
     }
 }
