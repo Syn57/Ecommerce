@@ -13,8 +13,9 @@ and other components that handle data management and retrieval.
 ## Structure Module Dependencies
 ```mermaid
   graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+      A[:data]-->B[:domain];
+      A-->C[:database];
+      A-->D[:network];
+      B-->E[:model];
+      C-->E
 ```
