@@ -21,14 +21,28 @@ class EcommerceApplicationConventionPlugin: Plugin<Project> {
             apply(plugin = "com.google.firebase.crashlytics")
             apply(plugin = "jacoco")
             apply(plugin = "io.gitlab.arturbosch.detekt")
-            extensions.configure<ApplicationExtension>{
+            extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
+                configureBuildType()
                 with(defaultConfig) {
                     targetSdk = AppConfig.TARGET_SDK
                     applicationId = AppConfig.APP_ID
                     versionCode = AppConfig.VERSION_CODE
                     versionName = AppConfig.VERSION_NAME
                 }
+            }
+        }
+    }
+
+    private fun ApplicationExtension.configureBuildType() {
+        buildTypes {
+            // Configure the build type here
+            debug {
+
+            }
+
+            release {
+
             }
         }
     }
