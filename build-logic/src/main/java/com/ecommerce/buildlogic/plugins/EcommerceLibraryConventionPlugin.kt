@@ -35,8 +35,6 @@ class EcommerceLibraryConventionPlugin: Plugin<Project> {
                     libs.findLibrary("androidx.tracing.ktx").get()
                 )
             }
-
-            // TODO: ADD BUILD TYPES AND FLAVOUR CONFIGURATION
         }
     }
 }
