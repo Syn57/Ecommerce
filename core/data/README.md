@@ -16,6 +16,7 @@ and other components that handle data management and retrieval.
       A[:data]-->B[:domain];
       A-->C[:database];
       A-->D[:network];
-      B-->E[:model];
-      A-->E
+      A-->E[:model];
+      A-->F[:datastore];
+      B-->E;
 ```

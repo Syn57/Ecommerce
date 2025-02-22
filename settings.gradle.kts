@@ -30,3 +30,4 @@ include(":core:database")
 
 include(":features")
 include(":features:home")
+include(":core:datastore")

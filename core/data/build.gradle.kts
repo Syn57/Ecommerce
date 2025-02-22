@@ -9,5 +9,9 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.Core.DOMAIN))
+    implementation(project(Modules.Core.DATABASE))
+    implementation(project(Modules.Core.DATASTORE))
+    implementation(project(Modules.Core.NETWORK))
     implementation(project(Modules.Core.MODEL))
 }
