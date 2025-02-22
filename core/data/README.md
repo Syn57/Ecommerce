@@ -17,5 +17,5 @@ and other components that handle data management and retrieval.
       A-->C[:database];
       A-->D[:network];
       B-->E[:model];
-      C-->E
+      A-->E
 ```
