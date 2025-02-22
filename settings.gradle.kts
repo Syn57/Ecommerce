@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -14,8 +15,11 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "Ecommerce"
 include(":app")
+
 include(":core")
 include(":core:uiassets")
 include(":core:model")
@@ -23,6 +27,7 @@ include(":core:domain")
 include(":core:data")
 include(":core:network")
 include(":core:database")
-include(":build-logic")
+
 include(":features")
 include(":features:home")
+include(":core:datastore")
