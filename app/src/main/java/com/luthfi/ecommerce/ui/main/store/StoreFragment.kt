@@ -16,7 +16,7 @@ import com.google.android.material.chip.Chip
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.luthfi.ecommerce.MainActivity
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.data.datasource.api.body.ProductsBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ProductsResponse
 import com.luthfi.ecommerce.databinding.FragmentStoreBinding

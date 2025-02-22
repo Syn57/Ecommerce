@@ -12,7 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.luthfi.ecommerce.MainActivity
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.domain.model.Product
 import com.luthfi.ecommerce.databinding.FragmentWishlistBinding
 import com.luthfi.ecommerce.ui.base.BaseFragment

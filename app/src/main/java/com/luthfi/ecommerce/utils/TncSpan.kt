@@ -4,7 +4,7 @@ import android.content.Context
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 
 fun getSpan(context: Context, sentence: String, spanString: Array<String>): SpannableStringBuilder {
     val spannable = SpannableStringBuilder(sentence)

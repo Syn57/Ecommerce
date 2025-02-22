@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R as RUI
 import com.luthfi.ecommerce.databinding.ItemContainerOnboardingBinding
 
 class ProductImageAdapter(private val context: Context, private val listImg: List<String>) :
@@ -17,8 +18,8 @@ class ProductImageAdapter(private val context: Context, private val listImg: Lis
             with(binding) {
                 Glide.with(context)
                     .load(data)
-                    .placeholder(R.drawable.thumbnail_load_product)
-                    .error(R.drawable.thumbnail_load_product)
+                    .placeholder(RUI.drawable.thumbnail_load_product)
+                    .error(RUI.drawable.thumbnail_load_product)
                     .into(ivItemOnboard)
             }
         }

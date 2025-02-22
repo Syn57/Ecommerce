@@ -13,6 +13,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.gson.Gson
 import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R as RUI
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.body.FulfillmentBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
@@ -89,8 +90,8 @@ class CheckoutFragment : BaseFragment() {
                 binding.tvCheckoutChoosePayment.text = it[SELECTED_PAYMENT]
                 Glide.with(requireContext())
                     .load(it[SELECTED_PAYMENT_LOGO])
-                    .error(R.drawable.ic_add_card)
-                    .placeholder(R.drawable.ic_add_card)
+                    .error(RUI.drawable.ic_add_card)
+                    .placeholder(RUI.drawable.ic_add_card)
                     .into(binding.ivCheckoutAddCard)
             }
         }
@@ -191,7 +192,7 @@ class CheckoutFragment : BaseFragment() {
 
     private fun logPurchase(fulfilment: FulfillmentResponse) {
         analytics.logEvent(FirebaseAnalytics.Event.PURCHASE) {
-            param(FirebaseAnalytics.Param.CURRENCY, getString(R.string.idr_currency))
+            param(FirebaseAnalytics.Param.CURRENCY, getString(RUI.string.idr_currency))
             param(FirebaseAnalytics.Param.VALUE, fulfilment.data?.total?.toDouble() ?: 0.0)
             param(FirebaseAnalytics.Param.PAYMENT_TYPE, "${fulfilment.data?.payment}")
             param(FirebaseAnalytics.Param.TRANSACTION_ID, "${fulfilment.data?.invoiceId}")

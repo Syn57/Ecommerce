@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.ecommerce.uiassets"
 }
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+}

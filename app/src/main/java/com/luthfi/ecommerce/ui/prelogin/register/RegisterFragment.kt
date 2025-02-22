@@ -15,7 +15,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.body.LoginBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
@@ -79,7 +80,7 @@ class RegisterFragment : Fragment() {
         // Button configuration
         binding.btnRegisterLoghit.setOnClickListener {
             val controller = Navigation.findNavController(view)
-            controller.navigate(R.id.action_registerFragment_to_loginFragment)
+            controller.navigate(RAPP.id.action_registerFragment_to_loginFragment)
         }
 
         fcm.token.addOnCompleteListener(
@@ -118,7 +119,7 @@ class RegisterFragment : Fragment() {
                         viewModel.prefSetAccessToken(value.data.data?.accessToken ?: "")
                         viewModel.prefSetRefreshToken(value.data.data?.refreshToken ?: "")
                         viewModel.prefSetIsLogin(true)
-                        findNavController().navigate(R.id.action_preloginNavto_mainNav)
+                        findNavController().navigate(RAPP.id.action_preloginNavto_mainNav)
                     }
 
                     is Resource.Loading -> {}

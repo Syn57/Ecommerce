@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ReviewResponse

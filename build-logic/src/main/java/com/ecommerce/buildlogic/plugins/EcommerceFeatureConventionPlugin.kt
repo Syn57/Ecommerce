@@ -44,6 +44,7 @@ class EcommerceFeatureConventionPlugin: Plugin<Project> {
             add("implementation", project(Modules.Core.MODEL))
             add("implementation", project(Modules.Core.NETWORK))
             add("implementation", project(Modules.Core.UI_ASSETS))
+            add("implementation", project(Modules.Core.UI_COMPONENT))
 
             // External library
             add("implementation", libs.findLibrary("androidx-core-ktx").get())

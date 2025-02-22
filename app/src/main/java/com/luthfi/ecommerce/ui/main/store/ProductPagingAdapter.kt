@@ -8,7 +8,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ProductsResponse
 import com.luthfi.ecommerce.databinding.ItemProductGridBinding
 import com.luthfi.ecommerce.databinding.ItemProductLinearBinding
@@ -26,7 +27,7 @@ class ProductPagingAdapter(private val context: Context) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ProductsResponse.Data.Item?) {
             with(binding) {
-                cvProductGrid.startAnimation(AnimationUtils.loadAnimation(itemView.context, R.anim.anim_one))
+                cvProductGrid.startAnimation(AnimationUtils.loadAnimation(itemView.context, RAPP.anim.anim_one))
                 tvItemGridProductName.text = data?.productName
                 tvItemGridPrice.text = format(data?.productPrice ?: 0)
                 tvItemGridStoreName.text = data?.store
@@ -46,7 +47,7 @@ class ProductPagingAdapter(private val context: Context) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ProductsResponse.Data.Item?) {
             with(binding) {
-                cvProductLinear.startAnimation(AnimationUtils.loadAnimation(itemView.context, R.anim.anim_one))
+                cvProductLinear.startAnimation(AnimationUtils.loadAnimation(itemView.context, RAPP.anim.anim_one))
                 tvItemLinearProductName.text = data?.productName
                 tvItemLinearPrice.text = format(data?.productPrice ?: 0)
                 tvItemLinearStoreName.text = data?.store

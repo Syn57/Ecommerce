@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.databinding.FragmentOnboardingBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -56,11 +57,11 @@ class OnboardingFragment : Fragment() {
         // Button Action
         binding.btnOnboardJoin.setOnClickListener {
             viewModel.prefSetIsOnboard(true)
-            findNavController().navigate(R.id.action_onboardingFragment_to_registerFragment)
+            findNavController().navigate(RAPP.id.action_onboardingFragment_to_registerFragment)
         }
         binding.btnOnboardSkip.setOnClickListener {
             viewModel.prefSetIsOnboard(true)
-            findNavController().navigate(R.id.action_onboardingFragment_to_loginFragment)
+            findNavController().navigate(RAPP.id.action_onboardingFragment_to_loginFragment)
         }
     }
 

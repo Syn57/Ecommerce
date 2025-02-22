@@ -17,7 +17,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.gson.Gson
-import com.luthfi.ecommerce.R
+import com.ecommerce.uiassets.R
+import com.luthfi.ecommerce.R as RAPP
 import com.luthfi.ecommerce.core.data.datasource.api.Resource
 import com.luthfi.ecommerce.core.data.datasource.api.responses.ErrorBody
 import com.luthfi.ecommerce.databinding.FragmentProfileBinding
@@ -154,7 +155,7 @@ class ProfileFragment : BaseFragment() {
                 when (value) {
                     is Resource.Success -> {
                         viewModel.prefSetUsername(value.data.data?.userName ?: "")
-                        findNavController().navigate(R.id.action_profileFragment_to_mainFragment)
+                        findNavController().navigate(RAPP.id.action_profileFragment_to_mainFragment)
                     }
 
                     is Resource.Loading -> {}
